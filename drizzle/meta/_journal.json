@@ -1,0 +1,27 @@
+{
+  "version": "5",
+  "dialect": "pg",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1691664474739,
+      "tag": "0000_woozy_triathlon",
+      "breakpoints": false
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1691669078748,
+      "tag": "0001_superb_karnak",
+      "breakpoints": false
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1691727831998,
+      "tag": "0002_third_wolverine",
+      "breakpoints": false
+    }
+  ]
+}
