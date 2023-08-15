@@ -1,8 +1,8 @@
 {
   "version": "5",
   "dialect": "pg",
-  "id": "36ccaedc-2fee-46c7-b1f8-8b6d5b63f45a",
-  "prevId": "ce3eb360-51c9-41d1-bd7b-790e1428665c",
+  "id": "7a4982cf-5a7c-47dc-baa4-285be40c3e81",
+  "prevId": "93fadbec-57ee-42e8-b7f0-bdfc4103559e",
   "tables": {
     "exams": {
       "name": "exams",
@@ -38,6 +38,54 @@
       "foreignKeys": {},
       "compositePrimaryKeys": {},
       "uniqueConstraints": {}
+    },
+    "questions": {
+      "name": "questions",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "exam_id": {
+          "name": "exam_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "question_type": {
+          "name": "question_type",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "question": {
+          "name": "question",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "mcqOptions": {
+          "name": "mcqOptions",
+          "type": "json",
+          "primaryKey": false,
+          "notNull": false,
+          "default": "'[]'::json"
+        },
+        "answer_cols": {
+          "name": "answer_cols",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "default": 1
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
     }
   },
   "enums": {},
@@ -45,6 +93,8 @@
   "_meta": {
     "schemas": {},
     "tables": {},
-    "columns": {}
+    "columns": {
+      "\"questions\".\"json\"": "\"questions\".\"mcqOptions\""
+    }
   }
 }

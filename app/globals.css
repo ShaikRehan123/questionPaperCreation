@@ -64,3 +64,9 @@
 .heading{
   @apply text-lg md:text-xl lg:text-2xl;
 }
+
+@media print {
+  * {
+    break-inside: avoid;
+  }
+}

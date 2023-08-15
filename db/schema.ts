@@ -27,7 +27,7 @@ export const questionsTable = pgTable("questions", {
     enum: questionTypes as [string, ...string[]],
   }).notNull(),
   question: text("question").notNull(),
-  mcqOptions: json("json").$type<string[]>().default([]),
+  mcqOptions: json("mcqOptions").$type<string[]>().default([]),
   answerCols: integer("answer_cols").default(1),
 });
 
